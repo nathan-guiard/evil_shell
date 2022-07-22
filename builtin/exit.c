@@ -6,7 +6,7 @@
 /*   By: nguiard <nguiard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 19:32:04 by nguiard           #+#    #+#             */
-/*   Updated: 2022/05/14 18:38:26 by nguiard          ###   ########.fr       */
+/*   Updated: 2022/07/22 19:03:51 by nguiard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,9 @@ void	ft_exit(int exit_value, char **args)
 	pointeur sur fonctions													*/
 void	ft_exit_builtin(char **args)
 {
-	ft_putstr_fd("exit\n", 2);
-	ft_exit(0, args);
+	ft_putstr_fd("You can't escape <3\n", 1);
+	(void)args;
+	//ft_exit(0, args);
 }
 
 /*	exit modulo 256 car bash le fait comme ca 

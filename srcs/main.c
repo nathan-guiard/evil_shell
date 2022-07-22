@@ -6,7 +6,7 @@
 /*   By: nguiard <nguiard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 11:28:51 by nguiard           #+#    #+#             */
-/*   Updated: 2022/07/22 18:02:37 by nguiard          ###   ########.fr       */
+/*   Updated: 2022/07/22 19:08:50 by nguiard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int	main(int argc, char **argv, char **env)
 	export(evil);
 	the_loop();
 	ft_exit_builtin(NULL);
+	ft_putendl_fd("Or maybe you can, well done i give you your shell back, however try change it back to the last one ;)", 1);
 	return (0);
 }
 
@@ -41,14 +42,17 @@ static void	the_loop(void)
 		line = prompt();
 		if (line)
 		{
+			if (ft_strcmp(line, "\\033") == 0)
+			{
+				free(line);
+				break;
+			}
 			if (line[0] != '\0')
 				pars_and_pipe(line);
 			else
 				free(line);
 		}
-		else
-			break ;
-		ft_putstr_fd("\n\033[1mPENSES A LOCK TA SESSION, ET DEBARASSES TOI DE MOI !!!\033[m\n\n", 2);
+		ft_putstr_fd("\n\033[1mREMEMBER TO LOCK YOUR SESSION, AND GET RID OF ME !!!\033[m\n\n", 2);
 	}
 }
 
