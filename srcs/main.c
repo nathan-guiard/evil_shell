@@ -6,7 +6,7 @@
 /*   By: nguiard <nguiard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 11:28:51 by nguiard           #+#    #+#             */
-/*   Updated: 2022/07/22 19:08:50 by nguiard          ###   ########.fr       */
+/*   Updated: 2022/07/22 19:11:21 by nguiard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	main(int argc, char **argv, char **env)
 	export(evil);
 	the_loop();
 	ft_exit_builtin(NULL);
-	ft_putendl_fd("Or maybe you can, well done i give you your shell back, however try change it back to the last one ;)", 1);
+	ft_putendl_fd("Or maybe you can, well done i give you your shell back, however try change it back a better one ;)", 1);
 	return (0);
 }
 
